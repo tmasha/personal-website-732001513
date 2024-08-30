@@ -1,2 +1,2 @@
-# personal-website-732001513
-Howdy! My name is Thomas Masha!
+# CSCE_331_Masha
+CSCE 331: Intro to Software Engineering

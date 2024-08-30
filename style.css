@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+  font-family: 'Orbitron', monospace;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+  margin-top: 0px;
+  background: linear-gradient(90deg, rgba(135,0,171,1) 0%, rgba(52,0,255,1) 100%);
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar li:last-child {
+  margin-right: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.navbar a:hover {
+  color: black;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+/* Greeting (Home) */
+
+.greeting {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin: 25vh auto;
+  padding: 20px;
+  width: 50%;
+  background: rgba(0, 0, 255, 0.199);
+  border-radius: 10px;
+}
+
+.greeting-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.greeting img {
+  width: auto;
+  height: 20vh;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+/* About (WIP */
+.about {
+  text-align: center;
+}
