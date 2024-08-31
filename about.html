@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>About</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-<head>
-  <title>About - Thomas Masha</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        
+        <canvas id="visualizerCanvas"></canvas>
+        
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul> 
 
-<!--Note to self: This navbar ul should go on every webpage .html immediately after the head.-->
-
-<div>
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-    </ul> 
-</div>
-
-<!--Everything above this line should be copy pasted onto every page.-->
-
-<body>
-    <div class="about">
-        <p>
-            This is where I'm going to write a long long description about myself later.
-        </p>
-    </div>
-
-</body>
+        <div class="greeting">
+            <div class="greeting-text">
+                <h1>Hi, I'm Thomas!</h1>
+                <p>I am a junior at Texas A&M University pursuing a Bachelor's of Science in Computer Science. Nice to meet you!</p>
+            </div>
+            <div class="">
+                <img src="/src/me.png" alt="me :D">
+            </div>
+        </div>
+        <script src="visualizer.js"></script>
+    </body>
 </html>
