@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 
 * {
   font-family: 'Orbitron', monospace;
@@ -16,6 +16,86 @@ html, body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  height: 0.5em;
+  display: none;
+}
+
+body {
+  padding-bottom: 0.5em;
+  overflow-x: scroll;
+  background-color: black;
+}
+
+/* general styles for divs */
+
+.left, .right, .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  width: 45%;
+  background: rgba(0, 0, 255, 0.199);
+  border-radius: 10px;
+  margin-bottom: var(--spacing);
+}
+
+.left {
+  margin: 25vh 5% 0 5%;
+  grid-column: 2 / 6;
+}
+
+.right {
+  margin: 25vh 5% 0 auto;
+  grid-column: 8 / 12;
+  align-items: flex-end;
+  text-align: right;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.center {
+  margin: 25vh auto;
+  text-align: center;
+}
+
+/* If screen is smaller, align left/right in the center */
+@media (max-width: 768px) {
+  .left, .right {
+    margin: 25vh auto;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Navbar */
 .navbar {
   margin-top: 0px;
@@ -25,6 +105,8 @@ html, body {
   font-size: 20px;
   font-weight: bold;
   width: 100%;
+  position: fixed;
+  z-index: 10;
 }
 
 .navbar ul {
@@ -96,4 +178,34 @@ html, body {
 /* About (WIP) */
 .about {
   text-align: center;
+}
+
+
+
+/* Thank you AI */
+.social-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.social-links li {
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.social-links i {
+  margin-right: 10px;
+  transition: color 0.4s ease;
+}
+
+.social-links a:hover i {
+  color: #007bff; /* Change color on hover */
 }

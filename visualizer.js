@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         x = 0;
         context.clearRect(0, 0, canvas.width, canvas.height);
         analyser.getByteFrequencyData(dataArray);
-
+        
         for (let i = 0; i < bufferLength; i++) {
             const barHeight = dataArray[i];
             const fraction = i / bufferLength;
