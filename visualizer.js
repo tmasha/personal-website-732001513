@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const audio = new Audio("src/test.mp3");
+    const audio = new Audio("/src/test.mp3");
     audio.volume = 0;
 
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
