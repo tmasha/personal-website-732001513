@@ -9,24 +9,31 @@
 
 <body>
 
+    <!-- Background Video -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="src/test.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <canvas id="visualizerCanvas"></canvas>
 
-    <ul class="navbar">
+    <ul class="navbar"> 
         <li><a href="index.html">About</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="qualifications.html">Qualifications</a></li>
         <li><a href="service.html">Service</a></li>
         <li><a href="contact.html">Contact</a></li>
-    </ul>
+    </ul> 
 
-    <div class="greeting">
-        <div class="greeting-text">
-            <h1>Hi, I'm Thomas!</h1>
-            <p>I am a junior at Texas A&M University pursuing a Bachelor's of Science in Computer Science. Nice to meet
-                you!</p>
-        </div>
-        <div class="greeting-image">
-            <img src="/src/me.png" alt="me :D">
+    <div id="content">
+        <div class="greeting">
+            <div class="greeting-text">
+                <h1>Hi, I'm Thomas!</h1>
+                <p>I am a junior at Texas A&M University pursuing a Bachelor's of Science in Computer Science. Nice to meet you!</p>
+            </div>
+            <div class="greeting-image">
+                <img src="/src/me.png" alt="me :D">
+            </div>
         </div>
     </div>
 
@@ -37,6 +44,7 @@
 
     <script src="visualizer.js"></script>
     <script src="changeStyle.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
