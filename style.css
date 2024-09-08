@@ -7,7 +7,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background: transparent;
   color: white;
@@ -27,9 +28,10 @@ body {
   background-color: black;
 }
 
-/* general styles for divs */
-
-.left, .right, .center {
+/* General styles for divs */
+.left,
+.right,
+.center {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,33 +75,46 @@ p {
   text-align: center;
 }
 
-/* If screen is smaller, align left/right in the center */
-@media (max-width: 768px) {
-  .left, .right {
-    margin: 25vh auto;
-    align-items: center;
-    text-align: center;
-  }
+/* Stuff for music and visualizer */
+#playPauseButton {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  margin-right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
 }
 
+#volumeSlider {
+  position: fixed;
+  bottom: 15px;
+  left: 50px;
+  width: 100px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* Changing style button */
+#changeStyleButton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
 
 /* Navbar */
 .navbar {
   margin-top: 0px;
-  background: linear-gradient(90deg, rgba(135,0,171,1) 0%, rgba(52,0,255,1) 100%);
+  background: linear-gradient(90deg, rgba(135, 0, 171, 1) 0%, rgba(52, 0, 255, 1) 100%);
   padding: 20px;
   text-align: center;
   font-size: 20px;
@@ -180,9 +195,7 @@ p {
   text-align: center;
 }
 
-
-
-/* Thank you AI */
+/* Social Links (AI) */
 .social-links ul {
   list-style-type: none;
   padding: 0;
@@ -207,5 +220,5 @@ p {
 }
 
 .social-links a:hover i {
-  color: #007bff; /* Change color on hover */
+  color: #007bff;
 }

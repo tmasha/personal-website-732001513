@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Home</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
 
-    <body>
-        
-        <canvas id="visualizerCanvas"></canvas>
-        
-        <ul class="navbar">
-            <li><a href="index.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="qualifications.html">Qualifications</a></li>
-            <li><a href="service.html">Service</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul> 
+<head>
+    <title>Home</title>
+    <link id="style" rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-        <div class="greeting">
-            <div class="greeting-text">
-                <h1>Hi, I'm Thomas!</h1>
-                <p>I am a junior at Texas A&M University pursuing a Bachelor's of Science in Computer Science. Nice to meet you!</p>
-            </div>
-            <div class="">
-                <img src="/src/me.png" alt="me :D">
-            </div>
+<body>
+
+    <canvas id="visualizerCanvas"></canvas>
+
+    <ul class="navbar">
+        <li><a href="index.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="qualifications.html">Qualifications</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="greeting">
+        <div class="greeting-text">
+            <h1>Hi, I'm Thomas!</h1>
+            <p>I am a junior at Texas A&M University pursuing a Bachelor's of Science in Computer Science. Nice to meet
+                you!</p>
         </div>
-        <script src="visualizer.js"></script>
-    </body>
+        <div class="greeting-image">
+            <img src="/src/me.png" alt="me :D">
+        </div>
+    </div>
+
+    <button id="playPauseButton">▶</button>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0">
+
+    <button id="changeStyleButton">🪄</button>
+
+    <script src="visualizer.js"></script>
+    <script src="changeStyle.js"></script>
+</body>
+
 </html>

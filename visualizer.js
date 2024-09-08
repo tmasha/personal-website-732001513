@@ -1,13 +1,12 @@
-//  Add event listener to the document to wait for the DOM to load
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('visualizerCanvas');
     const context = canvas.getContext('2d');
 
-    // Ensures the canvas fills the page
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const audio = new Audio("src/test.mp3");
+    audio.volume = 0;
 
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const analyser = audioContext.createAnalyser();
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     source.connect(analyser);
     analyser.connect(audioContext.destination);
 
-    analyser.fftSize = 128; // The number of data values that are calculated per second
+    analyser.fftSize = 128;
     const bufferLength = analyser.frequencyBinCount;
     const dataArray = new Uint8Array(bufferLength);
     const barWidth = (canvas.width / bufferLength);
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < bufferLength; i++) {
             const barHeight = dataArray[i];
             const fraction = i / bufferLength;
-            // For each color variable, the first number * (1 - fraction) is the starting color value, and the second number * fraction is the ending color value
             const r = Math.round(135 * (1 - fraction) + 55 * fraction);
             const g = Math.round(0 * (1 - fraction) + 0 * fraction);
             const b = Math.round(171 * (1 - fraction) + 255 * fraction);
@@ -41,12 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animate);
     }
 
-    // Start the visualizer when the user clicks anywhere on the page
-    document.body.addEventListener('click', () => {
-        audioContext.resume().then(() => {
-            audio.play().then(() => {
+    const volumeSlider = document.getElementById('volumeSlider');
+    volumeSlider.addEventListener('input', (event) => {
+        audio.volume = event.target.value;
+    });
+
+    const playPauseButton = document.getElementById('playPauseButton');
+    playPauseButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audioContext.resume().then(() => {
+                audio.play();
+                playPauseButton.textContent = '⏸';
                 animate();
             });
-        });
+        } else {
+            audio.pause();
+            playPauseButton.textContent = '▶';
+        }
     });
 });
