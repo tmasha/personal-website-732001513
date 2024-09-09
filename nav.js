@@ -16,6 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('serviceLink').addEventListener('click', () => loadContent('service.html'));
     document.getElementById('contactLink').addEventListener('click', () => loadContent('contact.html'));
 
-
     loadContent('about.html');
 });

@@ -246,5 +246,26 @@ p {
 }
 
 .social-links a:hover i {
-  color: #007bff;
+  color: #ffb158;
+}
+
+.content-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.controls-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.song-title {
+  position: fixed;
+  left: 50%;
+  bottom: 5px;
+  transform: translate(-50%, -50%);
+  background-color: black;
 }

@@ -26,10 +26,13 @@
 
     <div id="content"></div>
 
-    <button id="playPauseButton">▶</button>
-    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0">
+    <button id="playPauseButton" type="button">▶</button>
+    <div class="controls-wrapper">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0">
+        <p class="song-title"><a href="https://open.spotify.com/track/7vzWtCVhEKDmDkMmT3AiUL">You are listening to: Skrillex, Bobby Raps - Leave Me Like This</a></p>
+    </div>
 
-    <button id="changeStyleButton">🪄</button>
+    <button id="changeStyleButton" type="button">🪄</button>
 
     <script src="visualizer.js"></script>
     <script src="changeStyle.js"></script>
