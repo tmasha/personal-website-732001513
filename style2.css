@@ -63,6 +63,12 @@ body {
   text-align: right;
 }
 
+.center {
+  align-items: center;
+  text-align: center;
+  margin: 25vh auto 0 auto;
+}
+
 h1 {
   font-size: 2.5rem;
   margin: 0;
